@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    background-color: #C0DBD9;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 15px 15px;
+}
+
+.header {
+    padding: 30px;
+    background-color: #7FAFF6;
+}
+
+.button {
+    border: none;
+    padding: 8px 15px;
+    background-color: #A5C7F9;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    cursor: pointer;
+}
+
+.main__block1 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+    background-color: #B3F95A;
+}
+
+.block1__card {
+    display: flex;
+    background-color: #8AD191;
+    justify-content: center;
+    font-family: 'Roboto';
+    color: #FFF;
+    font-size: 53px;
+    font-weight: 400;
+    min-height: 198px;
+}
+
+.card1 {
+    grid-column: span 3;
+}
+
+.card1::after {
+    content: "1";
+    align-self: center;
+}
+
+.card2 {
+    grid-column: span 4;
+}
+
+.card2::after {
+    content: "2";
+    align-self: center;
+}
+
+.card3 {
+    grid-column: span 1;
+}
+
+.card3::after {
+    content: "3";
+    align-self: center;
+}
+
+.card4 {
+    grid-column: span 7;
+}
+
+.card4::after {
+    content: "4";
+    align-self: center;
+}
+
+.card5 {
+    grid-column: span 1;
+}
+
+.card5::after {
+    content: "5";
+    align-self: center;
+}
+
+.main__block2 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #88B5BF;
+}
+
+.block2__card {
+    flex: 1;
+    aspect-ratio: 255/199;
+    background-color: #0D89B0;
+}
+
+.footer {
+    width: 100%;
+    min-height: 100px;
+    background-color: #7FAFF6;
+}
+
+.popup {
+    position: fixed; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); 
+    z-index: 2;
+    opacity: 0; 
+    pointer-events: none; 
+    margin: 0;
+    padding: 0;
+}
+
+.popup:target {
+    opacity: 1; 
+	pointer-events: auto; 
+}
+
+.popup__dialog {
+    position: absolute;
+    top: calc(50vh - 200px);
+    left: calc(50vw - 200px);
+    min-width: 400px;
+    min-height: 400px;
+    background-color: #FFF;
+}
+
+.popup__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+.popup__title {
+    font-family: 'Roboto';
+    font-size: 53px;
+    font-weight: 400;
+    line-height: 62px;
+}
+
+.popup__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
